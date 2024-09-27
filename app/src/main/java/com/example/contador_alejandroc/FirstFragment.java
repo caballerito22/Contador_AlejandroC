@@ -14,6 +14,8 @@ import com.example.contador_alejandroc.databinding.FragmentFirstBinding;
 public class FirstFragment extends Fragment {
 
     private FragmentFirstBinding binding;
+    private Integer P_mas_a_i;
+    private Integer mas_vida_arriba;
 
     @Override
     public View onCreateView(
@@ -29,10 +31,19 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonFirst.setOnClickListener(v ->
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment)
-        );
+        P_mas_a_i =20;
+        mas_vida_arriba=0;
+
+        if (savedInstanceState != null){
+            P_mas_a_i = savedInstanceState.getInt("P_mas_a_i");
+            mas_vida_arriba = savedInstanceState.getInt("P_mas_a_i");
+        }
+
+        binding.masVidaArriba.setOnClickListener(v -> {
+            P_mas_a_i++;
+
+        });
+
     }
 
     @Override
