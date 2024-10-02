@@ -16,7 +16,7 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <Button
-        android:id="@+id/P_mas_a_i"
+        android:id="@+id/P_mas_uno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="P+"
@@ -25,7 +25,7 @@
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <Button
-        android:id="@+id/P_menos_a_d"
+        android:id="@+id/P_menos_uno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="P-"
@@ -51,6 +51,7 @@
         android:src="@android:drawable/arrow_up_float"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
 
@@ -61,11 +62,11 @@
         android:contentDescription="@string/action_settings"
         android:src="@drawable/baseline_favorite_24"
         app:layout_constraintBottom_toTopOf="@+id/flechaArriba"
-        app:layout_constraintEnd_toEndOf="@+id/P_mas_a_i"
+        app:layout_constraintEnd_toEndOf="@+id/P_mas_uno"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/P_mas_a_i"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/P_mas_uno"
+        app:layout_constraintVertical_bias="0.0"
         app:tint="@color/design_default_color_error"
         tools:src="@drawable/baseline_favorite_24" />
 
@@ -76,9 +77,9 @@
         android:contentDescription="@string/action_settings"
         android:src="@drawable/baseline_favorite_border_24"
         app:layout_constraintBottom_toTopOf="@+id/flechaArriba"
-        app:layout_constraintEnd_toEndOf="@+id/P_menos_a_d"
-        app:layout_constraintStart_toStartOf="@+id/P_menos_a_d"
-        app:layout_constraintTop_toBottomOf="@+id/P_menos_a_d"
+        app:layout_constraintEnd_toEndOf="@+id/P_menos_uno"
+        app:layout_constraintStart_toStartOf="@+id/P_menos_uno"
+        app:layout_constraintTop_toBottomOf="@+id/P_menos_uno"
         app:tint="@color/design_default_color_error"
         tools:src="@drawable/baseline_favorite_border_24" />
 
@@ -93,7 +94,7 @@
 
 
     <Button
-        android:id="@+id/P_mas_abajo_i"
+        android:id="@+id/P_mas_dos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="P+"
@@ -102,7 +103,7 @@
         tools:text="P+" />
 
     <Button
-        android:id="@+id/P_menos_abajo_d"
+        android:id="@+id/P_menos_dos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="P-"
@@ -114,8 +115,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/action_settings"
-        app:layout_constraintBottom_toTopOf="@+id/P_mas_abajo_i"
-        app:layout_constraintEnd_toEndOf="@+id/P_mas_abajo_i"
+        app:layout_constraintBottom_toTopOf="@+id/P_mas_dos"
+        app:layout_constraintEnd_toEndOf="@+id/P_mas_dos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flechaAbajo"
         app:srcCompat="@drawable/baseline_favorite_24"
@@ -126,9 +127,9 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/action_settings"
-        app:layout_constraintBottom_toTopOf="@+id/P_menos_abajo_d"
-        app:layout_constraintEnd_toEndOf="@+id/P_menos_abajo_d"
-        app:layout_constraintStart_toStartOf="@+id/P_menos_abajo_d"
+        app:layout_constraintBottom_toTopOf="@+id/P_menos_dos"
+        app:layout_constraintEnd_toEndOf="@+id/P_menos_dos"
+        app:layout_constraintStart_toStartOf="@+id/P_menos_dos"
         app:layout_constraintTop_toBottomOf="@+id/flechaAbajo"
         app:srcCompat="@drawable/baseline_favorite_border_24"
         app:tint="@color/design_default_color_error" />

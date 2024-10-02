@@ -27,7 +27,7 @@ public class FirstFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
-        //reset();
+        reset();
         return binding.getRoot();
 
     }
@@ -45,37 +45,53 @@ public class FirstFragment extends Fragment {
             pocion1 = savedInstanceState.getInt("pocion1");
         }
 
-        binding.PMasAI.setOnClickListener(v -> {
-            pocion1++;
-            refresh();
+        binding.PMasUno.setOnClickListener(v -> {
+            if (pocion1>=0) {
+                pocion1++;
+                refresh();
+            }
         });
-        binding.PMenosAD.setOnClickListener(v -> {
-            pocion1--;
-            refresh();
+        binding.PMenosUno.setOnClickListener(v -> {
+            if (pocion1>=0) {
+                pocion1--;
+                refresh();
+            }
         });
-        binding.PMasAbajoI.setOnClickListener(v -> {
-            pocion2++;
-            refresh();
+        binding.PMasDos.setOnClickListener(v -> {
+            if (pocion2>=0) {
+                pocion2++;
+                refresh();
+            }
         });
-        binding.PMenosAbajoD.setOnClickListener(v -> {
-            pocion2--;
-            refresh();
+        binding.PMenosDos.setOnClickListener(v -> {
+            if (pocion2>=0) {
+                pocion2--;
+                refresh();
+            }
         });
         binding.masVidaArriba.setOnClickListener(v -> {
-            vida1++;
-            refresh();
+            if (vida1>0) {
+                vida1++;
+                refresh();
+            }
         });
         binding.menosVidaArriba.setOnClickListener(v -> {
-            vida1--;
-            refresh();
+            if (vida1>0) {
+                vida1--;
+                refresh();
+            }
         });
         binding.masVidaAbajo.setOnClickListener(v -> {
-            vida2++;
-            refresh();
+            if (vida2 > 0) {
+                vida2++;
+                refresh();
+            }
         });
         binding.menosVidaAbajo.setOnClickListener(v -> {
-            vida2--;
-            refresh();
+            if (vida2>0) {
+                vida2--;
+                refresh();
+            }
         });
         binding.flechaArriba.setOnClickListener(v -> {
             if (vida2>0) {
