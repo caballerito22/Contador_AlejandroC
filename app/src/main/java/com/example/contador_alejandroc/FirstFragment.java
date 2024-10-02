@@ -78,14 +78,19 @@ public class FirstFragment extends Fragment {
             refresh();
         });
         binding.flechaArriba.setOnClickListener(v -> {
-            vida2--;
-            vida1++;
-            refresh();
+            if (vida2>0) {
+                vida2--;
+                vida1++;
+                refresh();
+            }
         });
         binding.flechaAbajo.setOnClickListener(v -> {
-            vida2++;
-            vida1--;
-            refresh();
+            if (vida1>0) {
+                vida2++;
+                vida1--;
+                refresh();
+            }
+
         });
 
 

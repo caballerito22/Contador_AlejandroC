@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fechaArriba"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/P_mas_a_i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/P_menos_a_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/flechaAbajo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/lorem_ipsum"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/flechaArriba"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/action_settings"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/mas_vida_arriba"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/baseline_favorite_24"
+        app:layout_constraintBottom_toTopOf="@+id/flechaArriba"
+        app:layout_constraintEnd_toEndOf="@+id/P_mas_a_i"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/P_mas_a_i"
+        app:layout_constraintVertical_bias="1.0"
+        app:tint="@color/design_default_color_error"
+        tools:src="@drawable/baseline_favorite_24" />
+
+    <ImageButton
+        android:id="@+id/menos_vida_arriba"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/baseline_favorite_border_24"
+        app:layout_constraintBottom_toTopOf="@+id/flechaArriba"
+        app:layout_constraintEnd_toEndOf="@+id/P_menos_a_d"
+        app:layout_constraintStart_toStartOf="@+id/P_menos_a_d"
+        app:layout_constraintTop_toBottomOf="@+id/P_menos_a_d"
+        app:tint="@color/design_default_color_error"
+        tools:src="@drawable/baseline_favorite_border_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/menos_vida_arriba"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="168dp" />
+
+
+    <Button
+        android:id="@+id/P_mas_abajo_i"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="P+" />
+
+    <Button
+        android:id="@+id/P_menos_abajo_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/mas_vida_abajo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/action_settings"
+        app:layout_constraintBottom_toTopOf="@+id/P_mas_abajo_i"
+        app:layout_constraintEnd_toEndOf="@+id/P_mas_abajo_i"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flechaAbajo"
+        app:srcCompat="@drawable/baseline_favorite_24"
+        app:tint="@color/design_default_color_error" />
+
+    <ImageButton
+        android:id="@+id/menos_vida_abajo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/action_settings"
+        app:layout_constraintBottom_toTopOf="@+id/P_menos_abajo_d"
+        app:layout_constraintEnd_toEndOf="@+id/P_menos_abajo_d"
+        app:layout_constraintStart_toStartOf="@+id/P_menos_abajo_d"
+        app:layout_constraintTop_toBottomOf="@+id/flechaAbajo"
+        app:srcCompat="@drawable/baseline_favorite_border_24"
+        app:tint="@color/design_default_color_error" />
+
+    <TextView
+        android:id="@+id/txp1a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20/0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/flechaArriba"
+        app:layout_constraintEnd_toStartOf="@+id/menos_vida_arriba"
+        app:layout_constraintStart_toEndOf="@+id/mas_vida_arriba"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txp1abajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20/0"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/menos_vida_abajo"
+        app:layout_constraintStart_toEndOf="@+id/mas_vida_abajo"
+        app:layout_constraintTop_toBottomOf="@+id/flechaAbajo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
