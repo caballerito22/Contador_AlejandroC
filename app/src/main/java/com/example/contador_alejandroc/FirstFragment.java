@@ -4,11 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
 import com.example.contador_alejandroc.databinding.FragmentFirstBinding;
 
 public class FirstFragment extends Fragment {
@@ -43,7 +40,6 @@ public class FirstFragment extends Fragment {
         }
 
         refresh();
-
 
         binding.PMasUno.setOnClickListener(v -> {
             if (pocion1 >= 0) {
@@ -119,12 +115,10 @@ public class FirstFragment extends Fragment {
         outState.putInt("pocion2", pocion2);
     }
 
-
     private void refresh() {
         binding.txp1a.setText(vida1 + "/" + pocion1);
         binding.txp1abajo.setText(vida2 + "/" + pocion2);
     }
-
 
     private void reset() {
         vida1 = 20;
