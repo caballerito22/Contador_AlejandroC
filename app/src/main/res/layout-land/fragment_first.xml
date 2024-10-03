@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,8 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-
-<androidx.constraintlayout.widget.Guideline
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,11 +23,11 @@
         app:layout_constraintBottom_toTopOf="@+id/menos_vida_arriba"
         app:layout_constraintEnd_toStartOf="@+id/flechaArriba"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mas_vida_arriba"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="20/0" />
 
     <TextView
-        android:id="@+id/txp1ab"
+        android:id="@+id/txp1abajo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="20/0"
@@ -37,7 +35,8 @@
         app:layout_constraintBottom_toTopOf="@+id/menos_vida_abajo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/flechaAbajo"
-        app:layout_constraintTop_toBottomOf="@+id/mas_vida_abajo" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20/0" />
 
     <Button
         android:id="@+id/P_mas_uno"
@@ -78,8 +77,10 @@
         android:contentDescription="@string/action_settings"
         app:layout_constraintBottom_toBottomOf="@+id/P_mas_uno"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/P_mas_uno"
         app:layout_constraintTop_toTopOf="@+id/P_mas_uno"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/baseline_favorite_24"
         app:tint="#F44336" />
 
@@ -102,7 +103,7 @@
         android:contentDescription="@string/action_settings"
         app:layout_constraintBottom_toBottomOf="@+id/P_mas_dos"
         app:layout_constraintEnd_toStartOf="@+id/P_mas_dos"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/P_mas_dos"
         app:srcCompat="@drawable/baseline_favorite_24"
         app:tint="#F44336" />
@@ -114,7 +115,7 @@
         android:contentDescription="@string/action_settings"
         app:layout_constraintBottom_toBottomOf="@+id/P_menos_dos"
         app:layout_constraintEnd_toStartOf="@+id/P_menos_dos"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/P_menos_dos"
         app:srcCompat="@drawable/baseline_favorite_border_24"
         app:tint="#F44336" />
@@ -126,9 +127,11 @@
         android:contentDescription="@string/action_settings"
         app:layout_constraintBottom_toTopOf="@+id/menos_vida_arriba"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mas_vida_arriba"
-        app:srcCompat="@android:drawable/arrow_up_float"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.498"
+        app:srcCompat="@android:drawable/arrow_up_float" />
 
     <ImageButton
         android:id="@+id/flechaAbajo"
@@ -136,10 +139,11 @@
         android:layout_height="0dp"
         android:contentDescription="@string/action_settings"
         app:layout_constraintBottom_toTopOf="@+id/menos_vida_abajo"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toEndOf="@+id/flechaArriba"
         app:layout_constraintTop_toBottomOf="@+id/mas_vida_abajo"
-        app:srcCompat="@android:drawable/arrow_down_float"
-        tools:ignore="TouchTargetSizeCheck" />
-
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/arrow_down_float" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
